@@ -1,0 +1,162 @@
+.doc {
+  height: 100vh;
+  left: 0;
+  max-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &__menu {
+    background-color: $white;
+    border-right: 1px solid $grey;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: .5s opacity;
+    width: 20%;
+    z-index: 101;
+
+
+    @media screen and (max-width: unquote(map-get($medias, md) + 'px')) {
+      float: none;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 30%;
+
+      &::before {
+        background-color: rgba($black, .7);
+        width: 100vw;
+      }
+    }
+
+    @media screen and (max-width: unquote(map-get($medias, sm) + 'px')) {
+      width: 70%;
+    }
+
+  }
+
+  &__menu-topic {
+    border-bottom: 1px solid $grey;
+    font-weight: bold;
+    padding: 1rem 0 1rem 1.5rem;
+
+    &:hover,
+    &:active {
+      background-color: $grey;
+    }
+
+  }
+
+  &__menu-button {
+    background-color: $white;
+    border-radius: 50%;
+    display: none;
+    height: 3rem;
+    position: fixed;
+    right: 4.5rem;
+    top: 1.5rem;
+    transition: .5s box-shadow;
+    width: 3rem;
+    z-index: 100;
+
+
+    @media screen and (max-width: unquote(map-get($medias, xs) + 'px')) {
+      right: 1.5rem;
+    }
+
+    @media screen and (max-width: unquote(map-get($medias, md) + 'px')) {
+      display: block;
+    }
+  }
+
+
+  &__menu-icon {
+    background: $black;
+    display: block;
+    height: .1rem;
+    left: .5rem;
+    position: relative;
+    top: 1.5rem;
+    width: 2rem;
+
+    &::before,
+    &::after {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    &::before {
+      top: -.5rem;
+    }
+
+    &::after {
+      bottom: -.5rem;
+    }
+  }
+
+  &__info {
+    border-bottom: 1px solid $grey;
+
+    &-img {
+      height: 10rem;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+
+    }
+
+    &-text {
+      padding: 0 5%;
+      text-align: center;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+
+    @media screen and (max-width: unquote(map-get($medias, md) + 'px')) {
+      float: none;
+      width: 100%;
+    }
+
+  }
+
+  &__text {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 5%;
+    width: 100%;
+
+    @media screen and (max-width: unquote(map-get($medias, md) + 'px')) {
+      padding-top: 20%;
+     }
+  }
+
+  input {
+    display: none;
+  }
+  
+  input:checked ~ label .doc__menu-button { 
+    box-shadow: 0 0 0 180vw $shadow;
+  }
+  
+  input:checked ~ .doc__menu {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section id="home">
+    {% for post in site.posts.toArray() %}
+        {% if post.online %}
+            <a href="{{ post.path }}"><article style="display: none">{{ post.title }}</article></a>
+        {% endif %}
+    {% endfor %}
+</section>
+
+{% block js %}
+    <script src="/js/opening.js"></script>
+{% endblock %}
