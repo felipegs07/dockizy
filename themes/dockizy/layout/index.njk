@@ -3,10 +3,8 @@ layout: default
 ---
 
 <section id="home">
-    {% for post in site.posts.toArray() %}
-        {% if post.online %}
-            <a href="{{ post.path }}"><article style="display: none">{{ post.title }}</article></a>
-        {% endif %}
+    {% for post in site.posts.sort('order', 1).toArray() %}
+        <a href="{{ post.path }}"><article style="display: none">{{ post.title }}</article></a>
     {% endfor %}
 </section>
 

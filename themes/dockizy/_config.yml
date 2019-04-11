@@ -1,0 +1,7 @@
+title: Dockizy Documentation
+name: Dockizy
+description:  >-
+   Dockizy is a simple, easy and fast theme to build documentations.<br><a href="https://github.com/felipegs07/dockyll" target="_blank">Contribute</a>
+img: "/img/dockizy.png" # logo of the documentation
+background_color: "#BE0000" # color of background on hover
+text_color: "#fff" #color of the text on hover
