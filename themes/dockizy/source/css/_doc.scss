@@ -26,6 +26,7 @@
       position: absolute;
       top: 0;
       width: 30%;
+      visibility: hidden;
 
       &::before {
         background-color: rgba($black, .7);
@@ -158,5 +159,6 @@
   
   input:checked ~ .doc__menu {
     opacity: 1;
+    visibility: visible;
   }
 }
