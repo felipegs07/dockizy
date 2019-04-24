@@ -21,6 +21,11 @@ Se você optar por clonar, abra o __git bash__ e execute este comando abaixo:
     git clone https://github.com/felipegs07/dockizy.git
 ```
 
+Precisaremos também instalar o Hexo em seu dispositivo:
+```bash
+    npm install hexo-cli -g
+```
+
 Depois acesse o diretório do tema e execute:
 ```bash
     npm install
