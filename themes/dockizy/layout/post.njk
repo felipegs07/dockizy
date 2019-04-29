@@ -13,7 +13,7 @@ layout: default
     <div id="doc-menu" class="doc__menu">
         <div class="doc__info">
             {% if theme.img %}
-                <a href="{{ url_for(config.root) }}"><img class="doc__info-img" src="{{ theme.img}}" alt="logo simplify"></a>
+                <a href="{{ config.root }}"><img class="doc__info-img" src="{{ theme.img}}" alt="logo simplify"></a>
             {% endif %}
             {% if theme.description %}
                 <p class="doc__info-text">{{ theme.description }}</p>
