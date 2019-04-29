@@ -41,9 +41,12 @@
   }
 
   &__menu-topic {
-    border-bottom: 1px solid $grey;
-    font-weight: bold;
-    padding: 1rem 0 1rem 1.5rem;
+    //border-bottom: 1px solid $grey;
+    font-weight: 500;
+    padding: .5rem 0 .5rem 1rem;
+    width: 95%;
+    margin: .5rem auto;
+    border-radius: .2rem;
 
     &:hover,
     &:active {
